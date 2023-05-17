@@ -1,0 +1,356 @@
+//  T I P O-----------D E-----------U--- S---U---A---R---I---O-----------------------------------
+###
+POST http://localhost:3000/api/creartipo_usuario HTTP/1.1
+Content-Type: application/json
+
+{
+   "tipo": "Cliente" 
+}
+
+
+###
+GET http://localhost:3000/api/mostrartipo_usuario HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editartipo_usuario/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "tipo": "Coordinador"  
+
+}
+
+###
+DELETE  http://localhost:3000/api/eliminartipo_usuario/3 HTTP/1.1
+
+
+###
+//------P---E---R---S---O---N---A---------------------------------------------------------------------------------------------------------------
+POST http://localhost:3000/api/crearPersona HTTP/1.1
+Content-Type: application/json
+
+{
+   "nombre": "x" ,
+   "email": "x@gmail.com" ,
+   "telefono": "x" ,
+   "foto": "png" 
+
+}
+###
+GET http://localhost:3000/api/mostrarpersona HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editarPersona/5 HTTP/1.1
+Content-Type: application/json
+
+{
+   "nombre": "Jamy" ,
+   "email": "jamilet2000@gmail.com" ,
+   "telefono": "09948751478" ,
+   "foto": "png" 
+
+}
+
+###
+DELETE  http://localhost:3000/api/eliminarpersona/6 HTTP/1.1
+
+//-U---S--U--A-R--I--O--------------------------------------------------------------------------------------------------------------------------
+###
+POST http://localhost:3000/api/crearUsuario HTTP/1.1
+Content-Type: application/json
+
+{
+   "tipo": "Anonimo" ,
+   "password":"yuyuyuyuyu" ,
+   "id_tipousuario": "4" ,
+   "id_persona": "1" 
+
+}
+
+###
+GET http://localhost:3000/api/mostrarusuario HTTP/1.1
+
+###
+PUT  http://localhost:3000/api/editarusuario/5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "tipo": "vender" ,
+   "password": "************" ,
+   "id_tipousuario": "4" ,
+   "id_persona": "1"   
+
+}
+
+###
+DELETE  http://localhost:3000/api/eliminarusuario/3 HTTP/1.1
+
+
+###
+//-----P---L---A--T--O-----------------------------------------------------------------------------------------------------------------
+POST http://localhost:3000/api/crearplato HTTP/1.1
+Content-Type: application/json
+
+{
+   "descripcion": "x" 
+    
+
+}
+###
+GET http://localhost:3000/api/mostrarplato HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editarplato/5 HTTP/1.1
+Content-Type: application/json
+
+{
+   "descripcion": "Camaron  Apanado"  
+
+}
+
+###
+DELETE  http://localhost:3000/api/eliminarplato/5 HTTP/1.1
+
+
+###
+//-----T--I--P--O------D--E------M--E--N--U-------------------------------------------------------------------------------------------------------------
+POST http://localhost:3000/api/creartipo_menu HTTP/1.1
+Content-Type: application/json
+
+{
+   "tipo": "x" 
+    
+
+}
+###
+GET http://localhost:3000/api/mostrartipo_menu HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editartipo_menu/4 HTTP/1.1
+Content-Type: application/json
+
+{
+   "tipo": "Especiales"  
+
+}
+
+###
+DELETE  http://localhost:3000/api/eliminarplato/3 HTTP/1.1
+
+
+
+
+
+
+###
+//----C---A---N---T---I---D---A---D----------D--E------------P---L--A---T---O--------------------------------------------------------------------------------------
+POST http://localhost:3000/api/crearcantidadplato HTTP/1.1
+Content-Type: application/json
+
+{
+   "fecha": "29/3/2023" ,
+   "cantidad":"x",
+   "id_plato":"4"
+    
+
+}
+###
+GET http://localhost:3000/api/mostrarcantidadplato HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editarcantidadplato/5 HTTP/1.1
+Content-Type: application/json
+
+{
+   "fecha": "29/3/2023" ,
+   "cantidad":"7",
+   "id_plato":"4"  
+
+}
+
+###
+DELETE  http://localhost:3000/api/eliminarcantidadplato/5 HTTP/1.1
+
+
+
+//--------M-----E-----N-----U------------------------------------
+###
+POST http://localhost:3000/api/crearmenu HTTP/1.1
+Content-Type: application/json
+
+{
+   "fecha": " " ,
+   "id_cantidadplato":"4",
+   "id_tipomenu":"2"
+}
+
+###
+GET http://localhost:3000/api/mostrarmenu HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editarmenu/2 HTTP/1.1
+Content-Type: application/json
+
+{
+   "fecha": " " ,
+   "id_cantidadplato":"1",
+   "id_tipomenu":"1"
+}
+
+###
+DELETE  http://localhost:3000/api/eliminarmenu/3 HTTP/1.1
+
+
+###
+//C R E D I T O ---------------------------------------------------------------------------------------------------------------------------------------
+POST http://localhost:3000/api/crearcredito HTTP/1.1
+Content-Type: application/json
+
+{
+   "fecha": "xxx" ,
+    "cantidad": "5" ,
+    "pagado": "0" ,
+    "precio": "2.00" ,
+    "id_persona": "3" ,
+    "id_plato": "4" 
+
+}
+###
+GET http://localhost:3000/api/mostrarcredito HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editarcredito/3 HTTP/1.1
+Content-Type: application/json
+
+{
+   "fecha": "2023-04-16T09:25:08.000Z" ,
+    "cantidad": "6" ,
+    "pagado": "1" ,
+    "precio": "3.00" ,
+    "id_persona": "1" ,
+    "id_plato": "2" 
+
+}
+
+###
+DELETE  http://localhost:3000/api/eliminarcredito/4 HTTP/1.1
+
+
+
+
+
+
+//---P  E  S  O------------------------------------------------------------------------------------------------------------------------------------
+###
+
+POST http://localhost:3000/api/crearpeso HTTP/1.1
+Content-Type: application/json
+
+{
+   "descripcion": "x"
+}
+###
+GET http://localhost:3000/api/mostrarpeso HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editarpeso/6 HTTP/1.1
+Content-Type: application/json
+
+{
+ "descripcion": "kilogramos" 
+
+}
+###
+DELETE  http://localhost:3000/api/eliminarpeso/6 HTTP/1.1
+
+
+
+
+//T I P O -----A L I M E N T O-------------------------------------------------------------------------------------------------------------------------------
+###
+
+POST http://localhost:3000/api/creartipo_alimento HTTP/1.1
+Content-Type: application/json
+
+{
+   "descripcion": "x"
+}
+###
+GET http://localhost:3000/api/mostrartipo_alimento HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editartipo_alimento/6 HTTP/1.1
+Content-Type: application/json
+
+{
+   "descripcion": "Productos lácteos"
+}
+
+###
+DELETE  http://localhost:3000/api/eliminartipo_alimento/6 HTTP/1.1
+
+// -----A L I M E N T O-------------------------------------------------------------------------------------------------------------------------------
+###
+
+POST http://localhost:3000/api/crearalimento HTTP/1.1
+Content-Type: application/json
+
+{
+   "descripcion": "x",
+   "id_tipoalimento": "2"
+}
+###
+GET http://localhost:3000/api/mostraralimento HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editaralimento/7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "descripcion": "Farro",
+   "id_tipoalimento": "2"
+}
+
+###
+DELETE  http://localhost:3000/api/eliminaralimento/2 HTTP/1.1
+
+// -----I N G R E D I E N T E S-------------------------------------------------------------------------------------------------------------------------------
+###
+
+POST http://localhost:3000/api/crearingredientes HTTP/1.1
+Content-Type: application/json
+
+{
+   "precio": "1000",
+   "id_plato": "2",
+   "id_alimento": "4",
+   "id_peso": "2"
+}
+###
+GET http://localhost:3000/api/mostraringredientes HTTP/1.1
+
+###
+
+PUT  http://localhost:3000/api/editaringredientes/1 HTTP/1.1
+Content-Type: application/json
+
+{
+     "precio": "0.20",
+   "id_plato": "2",
+   "id_alimento": "6",
+   "id_peso": "2"
+}
+
+###
+DELETE  http://localhost:3000/api/eliminaringredientes/3 HTTP/1.1
+
